@@ -1,347 +1,57 @@
-18 jun 2018 10:00:58,603 INFO  ~ Starting /Users/uach/Documents/git_proyects/yabe
-18 jun 2018 10:01:00,556 WARN  ~ You're running Play! in DEV mode
-18 jun 2018 10:01:00,656 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-18 jun 2018 10:15:46,511 ERROR ~ 
+19 jun 2018 11:40:34,827 INFO  ~ Starting /Users/uach/Documents/git_proyects/yabe
+19 jun 2018 11:40:36,139 WARN  ~ You're running Play! in DEV mode
+19 jun 2018 11:40:36,224 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+19 jun 2018 11:40:43,651 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0 for default
+19 jun 2018 11:40:44,679 INFO  ~ Application 'yabe' is now started !
+19 jun 2018 11:40:49,154 ERROR ~ 
 
-@78ah7fcdm
-Internal Server Error (500) for request GET /@tests
+@78aoplg2b
+Internal Server Error (500) for request GET /@tests/BasicTest.class
 
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
+Execution exception (In {module:testrunner}/app/controllers/TestRunner.java around line 117)
+NoClassDefFoundError occured :         Template_1004 (wrong name: Template_1004)
 
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:430)
-	at play.Play.start(Play.java:528)
-	at play.Play.detectChanges(Play.java:648)
-	at play.Invoker$Invocation.init(Invoker.java:199)
+play.exceptions.JavaExecutionException:         Template_1004 (wrong name: Template_1004)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
 	at Invocation.HTTP Request(Play!)
-18 jun 2018 10:15:46,902 ERROR ~ 
+Caused by: java.lang.NoClassDefFoundError:         Template_1004 (wrong name: Template_1004)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at play.templates.GroovyTemplate$TClassLoader.defineTemplate(GroovyTemplate.java:79)
+	at play.templates.GroovyTemplate.directLoad(GroovyTemplate.java:93)
+	at play.templates.BaseTemplate.loadFromCache(BaseTemplate.java:56)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:81)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at controllers.TestRunner.run(TestRunner.java:117)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+19 jun 2018 11:41:53,273 ERROR ~ 
 
-@78ah7fcdn
-Internal Server Error (500) for request GET /@tests
+@78aoplg2d
+Internal Server Error (500) for request GET /@tests/BasicTest.class
 
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
+Execution exception (In {module:testrunner}/app/controllers/TestRunner.java around line 117)
+NoClassDefFoundError occured :         Template_1004 (wrong name: Template_1004)
 
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:430)
-	at play.Play.start(Play.java:528)
-	at play.Play.detectChanges(Play.java:648)
-	at play.Invoker$Invocation.init(Invoker.java:199)
+play.exceptions.JavaExecutionException:         Template_1004 (wrong name: Template_1004)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
 	at Invocation.HTTP Request(Play!)
-18 jun 2018 10:16:35,978 ERROR ~ 
-
-@78ah7fcdo
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
-
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 10:31:30,325 ERROR ~ 
-
-@78ah7fcdp
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
-
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 10:31:32,510 ERROR ~ 
-
-@78ah7fce0
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
-
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 10:32:10,550 ERROR ~ 
-
-@78ah7fce1
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
-
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 10:35:37,926 ERROR ~ 
-
-@78ah7fce2
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
-
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 10:35:39,838 ERROR ~ 
-
-@78ah7fce3
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
-
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 11:12:54,130 ERROR ~ 
-
-@78ah7fce4
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
-
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 11:12:56,029 ERROR ~ 
-
-@78ah7fce5
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
-
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 11:12:56,868 ERROR ~ 
-
-@78ah7fce6
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
-
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 11:13:00,918 ERROR ~ 
-
-@78ah7fce7
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
-
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 11:14:42,268 ERROR ~ 
-
-@78ah7fce8
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
-
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 11:14:43,375 ERROR ~ 
-
-@78ah7fce9
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
-
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 11:19:34,882 ERROR ~ 
-
-@78ah7fcea
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
-
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 11:19:35,639 ERROR ~ 
-
-@78ah7fceb
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 9)
-The file /app/models/Comment.java could not be compiled. Error raised is : Model cannot be resolved to a type
-
-play.exceptions.CompilationException: Model cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 11:19:52,136 ERROR ~ 
-
-@78ah7fcec
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Comment.java around line 12)
-The file /app/models/Comment.java could not be compiled. Error raised is : Date cannot be resolved to a type
-
-play.exceptions.CompilationException: Date cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 11:23:28,781 ERROR ~ 
-
-@78ah7fced
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /app/models/Post.java around line 20)
-The file /app/models/Post.java could not be compiled. Error raised is : List cannot be resolved to a type
-
-play.exceptions.CompilationException: List cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:292)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:328)
-	at play.Play.detectChanges(Play.java:637)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 11:23:40,481 ERROR ~ 
-
-@78ah7fcee
-Internal Server Error (500) for request GET /@tests
-
-Compilation error (In /test/BasicTest.java around line 79)
-The file /test/BasicTest.java could not be compiled. Error raised is : The method assertsEquals(int, int) is undefined for the type BasicTest
-
-play.exceptions.CompilationException: The method assertsEquals(int, int) is undefined for the type BasicTest
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
-	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:430)
-	at play.Play.start(Play.java:528)
-	at play.Play.detectChanges(Play.java:648)
-	at play.Invoker$Invocation.init(Invoker.java:199)
-	at Invocation.HTTP Request(Play!)
-18 jun 2018 11:24:04,540 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0 for default
-18 jun 2018 11:24:05,784 INFO  ~ Application 'yabe' is now started !
+Caused by: java.lang.NoClassDefFoundError:         Template_1004 (wrong name: Template_1004)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at play.templates.GroovyTemplate$TClassLoader.defineTemplate(GroovyTemplate.java:79)
+	at play.templates.GroovyTemplate.directLoad(GroovyTemplate.java:93)
+	at play.templates.BaseTemplate.loadFromCache(BaseTemplate.java:56)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:81)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at controllers.TestRunner.run(TestRunner.java:117)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more

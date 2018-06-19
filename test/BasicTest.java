@@ -1,7 +1,5 @@
 import org.junit.*;
-
 import java.util.*;
-
 import play.test.*;
 import models.*;
 
@@ -56,7 +54,7 @@ public class BasicTest extends UnitTest {
         assertNotNull(firstPost);
         assertEquals(bob, firstPost.author);
         assertEquals("My first post", firstPost.title);
-        assertEquals("Hello word", firstPost.content);
+        assertEquals("Hello World", firstPost.content);
         assertNotNull(firstPost.postedAt);
     }
 
@@ -99,7 +97,7 @@ public class BasicTest extends UnitTest {
         //  Create a new post
         Post bobPost = new Post(bob, "My fist post", "Hello word").save();
 
-        //  Post.java.java.java a first comment
+        //  Post a first comment
         bobPost.addComment("Jeff", "Nice post");
         bobPost.addComment("Tom", "I knew that !");
 

@@ -1,5 +1,5 @@
-# you describe your data using the YAML notation here
-# and then load them using Fixtures.load("data.yml")
+# you describe your initial-data.yml using the YAML notation here
+# and then load them using Fixtures.load("initial-data.yml.yml")
 
 # User(bob):
 #   email: bob@gmail.com
