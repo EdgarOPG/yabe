@@ -148,15 +148,15 @@ public class BasicTest extends UnitTest {
 
         //  Find the most resent post
         Post frontPost = Post.find("order by postedAt desc").first();
-        assertNotNull(fromPost);
+        assertNotNull(frontPost);
         assertEquals("About the model layer", frontPost.title);
 
         //  Check that this post has two comments
         assertEquals(2, frontPost.comments.size());
 
         //  Post a new comment
-        fromPost.addComment("Jim", "Hello gays");
-        assertEquals(3, frontPost.commnet.size());
+        frontPost.addComment("Jim", "Hello guys");
+        assertEquals(3, frontPost.comments.size());
         assertEquals(4, Comment.count());
     }
 
