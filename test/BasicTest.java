@@ -122,4 +122,42 @@ public class BasicTest extends UnitTest {
         assertEquals(0, Post.count());
         assertEquals(0, Comment.count());
     }
+
+    @Test
+    public void fullTest(){
+        Fixtures.load("data.yml");
+
+        //  Count things
+        assertEquals(2, User.count());
+        assertEquals(3, Post.count());
+        assertEquals(3, Comment.count());
+
+        //  Try to connect as users
+        assertNotNull(User.connect("bob@gmail.com", "secret"));
+        assertNotNull(User.connect("jeff@gmail.com", "secret"));
+        assertNull(User.connect("jeff@gmail.com", "badpassword"));
+        assertNull(User.connect("tom@gmail.com", "secret"));
+
+        //  Find all bob's posts
+        List<Post> bobPost = Post.find("author.email", "bob@gmail.com").fetch();
+        assertEquals(2, bobPost.size());
+
+        //  Find all commnets related to bob's posts
+        List<Comment> bobComments = Comment.find("post.author.email", "bob@gmail.com").fetch();
+        assertEquals(3, bobComments.size());
+
+        //  Find the most resent post
+        Post frontPost = Post.find("order by postedAt desc").first();
+        assertNotNull(fromPost);
+        assertEquals("About the model layer", frontPost.title);
+
+        //  Check that this post has two comments
+        assertEquals(2, frontPost.comments.size());
+
+        //  Post a new comment
+        fromPost.addComment("Jim", "Hello gays");
+        assertEquals(3, frontPost.commnet.size());
+        assertEquals(4, Comment.count());
+    }
+
 }
