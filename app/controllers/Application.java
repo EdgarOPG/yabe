@@ -5,6 +5,7 @@ import play.mvc.*;
 import play.libs.*;
 import play.cache.*;
 import play.data.validation.*;
+import play.Logger;
 
 import java.util.*;
 
@@ -59,4 +60,8 @@ public class Application extends Controller {
         renderBinary(captcha);
     }
 
+    public static void listTagged(String tag) {
+        List<Post> posts = Post.findTaggedWith(tag);
+        render(tag, posts);
+    }
 }

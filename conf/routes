@@ -5,7 +5,9 @@
 # Home page
 GET     /                                       Application.index
 
-GET     /posts/{id}                             Application.show
+GET     /posts/{<[0-9]+>id}                     Application.show
+
+GET     /tags/{tag}                            Application.listTagged
 
 POST    /posts/{postsId}/comments               Application.postComment
 
@@ -19,3 +21,6 @@ GET     /public/                                staticDir:public
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
+
+# Import CRUD routes
+*       /admin                                  module:crud

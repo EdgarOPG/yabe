@@ -40,6 +40,8 @@ Post(secondBobPost):
     author:         bob
     content:        >
                     Well, it's just a test.
+    tags:
+                        - architecture
 
 Post(jeffPost):
     title:          The MVC application

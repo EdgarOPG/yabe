@@ -67,7 +67,7 @@ public class BasicTest extends UnitTest {
         //  Create a new post
         Post bobPost = new Post(bob, "My first post", "Hello word").save();
 
-        //  Post.java.java.java a first comment
+        //  Posts.java.java.java a first comment
         new Comment(bobPost, "Jeff", "Nice post").save();
         new Comment(bobPost, "Tom", "I knew that !").save();
 

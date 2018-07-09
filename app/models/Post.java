@@ -4,23 +4,33 @@ import java.util.*;
 import javax.persistence.*;
 
 import play.db.jpa.*;
+import play.data.validation.*;
+
+import play.Logger;
 
 @Entity
 public class Post extends Model {
+
+    @Required
     public String title;
+
+    @Required
     public Date postedAt;
 
     @Lob
+    @Required
+    @MaxSize(1000)
     public String content;
 
+    @Required
     @ManyToOne
     public User author;
 
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
-    public List<Comment> comments;
+    public List<Comment> comments = new ArrayList();
 
-    @ManyToMany(cascade=CascadeType.PERSIST)
-    public Set<Tag> tags;
+    @ManyToMany(cascade=CascadeType.ALL)
+    public Set<Tag> tags = new HashSet();
 
     public Post(User author, String title, String content) {
         this.comments = new ArrayList<Comment>();
@@ -51,8 +61,20 @@ public class Post extends Model {
     };
 
     public static List<Post> findTaggedWith(String... tags) {
-        return Post.find(
-            "select distinct p.id from Post p join p.tags as t where t.name in (:tags) group by p.id having count(t.id) = :size"
+
+        List<Long> postsIds = Post.find(
+                "select distinct p.id from Post p join p.tags as t where t.name in (:tags) group by p.id having count(t.id) = :size"
         ).bind("tags", tags).bind("size", tags.length).fetch();
-    };
+
+        List<Post> posts = new ArrayList<>();
+        for (Long id : postsIds){
+            Post post = Post.findById(id);
+            posts.add(post);
+        }
+        return posts;
+    }
+
+    public String toString() {
+        return title;
+    }
 }
