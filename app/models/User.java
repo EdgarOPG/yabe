@@ -32,5 +32,4 @@ public class User extends Model {
     public String toString() {
         return email;
     }
-
 }

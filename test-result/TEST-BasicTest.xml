@@ -1,14 +1,84 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<testsuite failures="0" time="0.047" errors="0" skipped="0" tests="5" name="BasicTest">
-  <testcase classname="BasicTest" name="createAndRetrieveUser" time="0.006">
+<testsuite failures="1" time="0.156" errors="0" skipped="0" tests="6" name="BasicTest">
+  <testcase classname="BasicTest" name="createAndRetrieveUser" time="0.009">
       </testcase>
-  <testcase classname="BasicTest" name="tryConnectAsUser" time="0.006">
+  <testcase classname="BasicTest" name="tryConnectAsUser" time="0.007">
       </testcase>
-  <testcase classname="BasicTest" name="createPost" time="0.007">
+  <testcase classname="BasicTest" name="createPost" time="0.009">
       </testcase>
-  <testcase classname="BasicTest" name="postComments" time="0.01">
+  <testcase classname="BasicTest" name="postComments" time="0.012">
       </testcase>
-  <testcase classname="BasicTest" name="useTheCommentsRelation" time="0.018">
+  <testcase classname="BasicTest" name="useTheCommentsRelation" time="0.021">
       </testcase>
+  <testcase classname="BasicTest" name="fullTest" time="0.069">
+      </testcase>
+  <testcase classname="BasicTest" name="testTags" time="0.029">
+                  <failure type="" message="Failure, expected:&lt;1&gt; but was:&lt;0&gt;">
+        <![CDATA[
+          In /test/BasicTest.java, line 185
+          
+                      assertEquals(1, Post.findTaggedWith(&quot;Red&quot;, &quot;Blue&quot;).size()); :
+          
+        ]]>
+        </failure>
+                  <system-err>
+            java.lang.AssertionError: expected:&lt;1&gt; but was:&lt;0&gt;
+	at org.junit.Assert.fail(Assert.java:93)
+	at org.junit.Assert.failNotEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:128)
+	at org.junit.Assert.assertEquals(Assert.java:472)
+	at org.junit.Assert.assertEquals(Assert.java:456)
+	at BasicTest.testTags(BasicTest.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at play.test.PlayJUnitRunner$StartPlay$2$1.evaluate(PlayJUnitRunner.java:128)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at play.test.PlayJUnitRunner.run(PlayJUnitRunner.java:70)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:24)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:136)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at play.test.TestEngine.run(TestEngine.java:188)
+	at controllers.TestRunner$1.doJobWithResult(TestRunner.java:101)
+	at controllers.TestRunner$1.doJobWithResult(TestRunner.java:1)
+	at play.jobs.Job$2.apply(Job.java:208)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:298)
+	at play.jobs.Job.withinFilter(Job.java:185)
+	at play.jobs.Job.call(Job.java:204)
+	at play.jobs.Job$1.call(Job.java:119)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+          </system-err>  
+        }
+                  </testcase>
 </testsuite>

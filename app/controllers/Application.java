@@ -64,4 +64,5 @@ public class Application extends Controller {
         List<Post> posts = Post.findTaggedWith(tag);
         render(tag, posts);
     }
+    
 }
